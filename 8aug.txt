@@ -1,0 +1,1246 @@
+1. Write a C++ function that takes a character as input and uses nested if-else statements to determine if it is a 
+vowel or consonant, considering both uppercase and lowercase letters.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+string tmp(char a)
+{
+    if((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z'))
+    {
+        if(a == 'A' || a == 'E' || a == 'I' || a == 'O' || a == 'U' || a == 'a' || a == 'e' || a == 'i' || a == 'o' || a == 'u' )
+            {
+                return "vowels";
+            }
+        else
+            {
+                return "consonant";
+            }
+    }
+    else
+    {
+        return "invalid input";
+    }
+}
+
+int main() 
+{
+    char a;
+
+    cout << "Enter your character:\n ";
+    cin >> a;
+    
+    string b = tmp(a);
+    cout<< b;
+    
+
+    return 0;
+}
+
+
+2. Write a C++ function that takes an integer as input and uses nested if-else statements 
+to determine if the number is positive and even, positive and odd, negative and even, or negative and odd.
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+string tmp(char a)
+{
+    if (a>0)
+    {
+        if(a%2 == 0)
+        {
+            return "number is postive and even";
+        }
+        
+        else
+        {
+            return "number is positive and odd";
+        }
+    }
+    if(a<0)
+    {
+        if(a%2 == 0)
+        {
+            return "number is negative and even";
+        }
+        else
+        {
+            return "number is negative and odd";
+        }
+    }
+    
+    
+    
+ 
+    
+
+    
+    
+
+}
+
+
+
+int main() 
+{
+    int a;
+
+    cout << "Enter number: ";
+    cin >> a;
+    
+    string b = tmp(a);
+    cout<< b;
+    
+
+    return 0;
+}
+
+3. Write a C++ function that takes a float as input and uses nested if-else statements to 
+determine if the number is positive, negative, or zero, and whether it is a whole number or a fraction.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+string tmp(float a)
+{
+    int x;
+    x = int(a);
+    
+    if(a>0)
+    {
+         if(x-a==0)
+        {
+            return "positive and whole number";
+        }
+        else
+        {
+            return "positive but not whole number";
+        }
+        
+    }
+    
+    else if(a<0)
+    {
+        if(x-a==0)
+        {
+            return "negative and whole number";
+        }
+        else
+        {
+            return "neagative and not whole number";
+        }
+        
+    }
+    
+    else
+    {
+        return "zero";
+    
+    
+    
+    
+    
+    
+}
+}
+
+
+int main() 
+{
+    float a;
+
+    cout << "Enter number: ";
+    cin >> a;
+    
+    string b = tmp(a);
+    cout<< b;
+    
+
+    return 0;
+}
+
+
+4. Write a C++ function that takes an integer as input and uses nested if-else statements 
+to determine if the number is within a specific range (e.g., 1-100) and if it is divisible by 7.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+string tmp(int a)
+{
+  if(a>= 1 && a <= 50)
+  {
+      if (a % 7 == 0)
+      {
+          return "number is in range and divisable by 7";
+      }
+      else
+      {
+          return "number is in range but not divisable by 7";
+      }
+      
+  }
+  else
+  {
+      return "out of range, input again";
+  }
+    
+    
+
+}
+
+
+
+int main() 
+{
+    int a;
+
+    cout << "Enter number in range 1 to 50: ";
+    cin >> a;
+    
+    string b = tmp(a);
+    cout<< b;
+    
+
+    return 0;
+}
+
+
+5. Write a C++ function that takes two integers as input and uses nested if-else statements to 
+determine if both numbers are positive, both are negative, or one is positive and the other is negative.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int tmp(int a, int b)
+{
+    if(a>0 && b > 0)
+    {
+        cout << "both numbers are positive"; 
+    }
+    else if(a<0 && b <0)
+    {
+        cout << "both numbers are negative";
+    }
+    else if(a>0 && b < 0)
+    {
+        cout << a << " is positive and "<< b <<" is negative";
+    }
+    else if(a<0 && b > 0)
+    {
+        cout << b << " is positive and "<< a <<" is negative";
+    }
+    
+    
+
+}
+
+
+
+int main() 
+{
+    int a,b;
+
+    cout << "Enter numbers: ";
+    cin >> a >> b;
+    
+    tmp(a,b);
+    
+
+    return 0;
+}
+
+6. Write a C++ function that takes three angles as input and uses nested if-else statements 
+to determine if they can form a right-angled triangle, an obtuse triangle, or an acute triangle.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+string angle(int a, int b,int c)
+{
+    if(a+b+c != 180 || a<= 0 || b<= 0 || c<= 0)
+    {
+        return "invalid";
+    }
+    
+   
+    if (a == 90 || b == 90 || c == 90) 
+    {
+        return "Right-angled triangle";
+    } 
+    else if (a > 90 || b > 90 || c > 90) 
+    {
+        return "Obtuse triangle";
+    } 
+    else 
+    {
+        return "Acute triangle";
+    }
+    
+}
+
+int main()
+{
+    float a,b,c;
+    cout<<"enter 3 angles\n";
+    cin>>a >>b >>c;
+    string z = angle(a,b,c);
+    cout<<z;
+}
+
+7. Write a C++ function that takes the coordinates of a point (x, y) as input and 
+uses nested if-else statements to determine in which quadrant the point lies.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int tmp(int a, int b)
+{
+    if(a>0 && b > 0)
+    {
+        cout << "lies in first quardant"; 
+    }
+    else if(a<0 && b > 0)
+    {
+        cout << "lies in second quardant";
+    }
+    else if(a<0 && b < 0)
+    {
+        cout << "lies in third quardant";
+    }
+    else if(a>0 && b < 0)
+    {
+        cout << "lies in fourth quardant";
+    }
+    else if(a==0 && b > 0)
+    {
+        cout << "lies at positive b axis";
+    }
+    else if(a==0 && b < 0)
+    {
+        cout << "lies at negative b axis";
+    }
+    else if(a<0 && b == 0)
+    {
+        cout << "lies at negative a axis";
+    }
+    else if(a>0 && b == 0)
+    {
+        cout << "lies at positive a axis";
+    }
+    else
+    {
+        cout << "lies at origin";
+    }
+    
+    
+    
+    
+
+}
+
+
+
+int main() 
+{
+    int a,b;
+
+    cout << "Enter numbers: ";
+    cin >> a >> b;
+    
+    tmp(a,b);
+    
+
+    return 0;
+}
+
+8. Write a C++ function that takes an integer as input and uses 
+nested if-else statements to determine if the number is a perfect cube or not.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+string tmp(int a)
+{
+    if (a == 0)
+    {
+        return "perfect cube";
+    }
+    
+    int x = round(cbrt(abs(a)));
+    
+    if(x * x * x == abs(a))
+    {
+        if(a>0)
+        {
+            return "perfect cube";
+        }
+        else
+        {
+            return "perfect cube";
+        }
+    }
+    else
+    {
+        return "not perfect cube";
+    }
+    
+    
+    
+
+}
+
+
+
+int main() 
+{
+    int a;
+
+    cout << "Enter number: ";
+    cin >> a;
+    
+    string s = tmp(a);
+    cout<<s;
+    
+
+    return 0;
+}
+
+9. Write a C++ function that takes an integer as input and uses 
+nested if-else statements to determine if the number is a power of 2 or not.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+string power2(int n)
+{
+    while(n%2==0)
+    {
+        n/= 2;
+    }
+    if(n==1)
+    {
+        return "its power of 2";
+    }
+    else
+    {
+        return "its not power of 2";
+    }
+    
+    
+}
+
+int main()
+{
+    int n;
+    cout<<"enter number\n";
+    cin>>n;
+   
+    string a = power2(n);
+    cout<<a;
+    
+
+}
+
+
+
+
+
+
+10. Write a C++ function that takes a character as input and uses nested if-else 
+statements to determine if it is a digit, uppercase letter, lowercase letter, or a special character
+
+#include<bits/stdc++.h>
+using namespace std;
+
+string check(char a)
+{
+
+    if (a >= 'A' && a <= 'Z') 
+    {
+       return "upper case letter";
+    }
+    
+    else if (a >= 'a' && a <= 'z') 
+    {
+       return "lower case letter";
+    }
+    
+    else if (a >= '1' && a <= '9') 
+    {
+       return "digit";
+    }
+  
+    else
+    {
+        return "special character";
+    }
+    
+}
+
+int main()
+{
+    char a;
+    cout<<"enter character\n";
+    cin>>a;
+    string z = check(a);
+    cout<<z;
+}
+
+11. Write a C++ function that takes three integers as input and uses nested if-else 
+statements to determine if they form an arithmetic progression (AP), geometric progression (GP), or neither.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int tmp(int a, int b, int c)
+{
+    if (b - a == c - b)
+    {
+        cout<< "The numbers form is AP";
+    }
+    else
+    {
+        if(a != 0 && b != 0 && c/b == b/a)
+        {
+            cout<<"The numbers are form GP";
+        }
+        else
+        {
+            cout <<"The numbers do not form an AP and GP";
+        }
+    }    
+}
+
+
+int main() 
+{
+    int a,b,c;
+
+    cout << "Enter numbers:\n ";
+    cin >> a>>b>>c;
+    
+    tmp(a,b,c);
+    
+
+    return 0;
+}
+
+12. Write a C++ function that takes a single digit as input and uses nested 
+if-else statements to determine if it is even or odd and if it is prime or not.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int tmp(int a)
+{
+     if (a % 2 == 0) 
+     {
+        cout << a <<" is even ";
+     } else 
+     {
+        cout << a << " is odd ";
+     }
+
+    if (a == 2 || a == 3 || a == 5 || a == 7) 
+    {
+        cout << "and prime.\n";
+    } else 
+    {
+        cout <<"and not prime.\n";
+    }   
+}
+
+
+int main() 
+{
+    int a;
+
+    cout << "Enter number:\n ";
+    cin >> a;
+    
+    tmp(a);
+    
+
+    return 0;
+}
+
+13. Write a C++ function that takes two integers as input and uses nested if-else 
+statements to determine if the first is a multiple of the second, and if the second is a multiple of the first
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int tmp(int a, int b)
+{
+    
+    
+    if(b != 0)
+    {
+        if(a % b == 0)
+        {
+            cout << a<< " is multiple of "<< b <<"\n";
+        }
+        else
+        {
+            cout << a<< " is not multiple of "<< b <<"\n";
+        }
+    }
+    
+    else
+    {
+        cout<<" cannot check multiple if second number is zero\n";
+    }
+    
+     if(a != 0)
+    {
+        if(b % a == 0)
+        {
+            cout << b<< " is multiple of "<< a <<"\n";
+        }
+        else
+        {
+            cout << b<< " is not multiple of "<< a <<"\n";
+        }
+    }
+    
+    else
+    {
+        cout<<"cannot check multiple if second number is zero\n";
+    }
+
+}
+
+
+int main() 
+{
+    int a,b;
+
+    cout << "Enter number:\n ";
+    cin >> a >> b;
+    
+    tmp(a,b);
+    
+
+    return 0;
+}
+
+14. Write a C++ function that takes a character as input and uses nested 
+if-else statements to determine if it is a letter and if it is a vowel or consonant, or if it is a digit.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+string tmp(char a)
+{
+     if (a >= 'A' && a <= 'Z' || a >= 'a' && a<= 'z')
+    {
+      if (a== 'a' || a == 'e' || a == 'i'|| a== 'o'||a=='u'||a== 'A' || a == 'E' || a == 'I'|| a== 'O'||a=='U')
+      {
+          return "It is a letter and its a vowel";
+      }
+      else
+      {
+          return "It is a letter and its a consonant";
+      }
+    }
+    
+    if (a >= '1' && a <= '9') 
+    {
+       return "its a digit";
+    }
+    
+    
+    
+    
+}
+
+
+int main() 
+{
+    char a;
+
+    cout << "Enter character:\n ";
+    cin >> a;
+    
+    string b = tmp(a);
+    cout << b;
+    
+
+    return 0;
+}
+
+15. Write a C++ function that takes two integers as input and uses nested if-else 
+statements to determine if their sum is even or odd, and if it is greater than a specific number
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int tmp(int a, int b, int c)
+{
+    int z = a +b;
+    
+    if(z%2 == 0)
+    {
+        cout<< "the sum of number is even\n";
+        
+        if(z > c)
+        {
+            cout<<"the sum "<< z << " is greater than " << c << "\n";
+        }
+        else
+        {
+            cout<<"the sum "<< z << " is not greater than " << c << "\n";
+        }
+    }   
+    else
+    {
+        cout<< "the sum of number is odd\n";
+        
+        if(z > c)
+        {
+            cout<<"the sum "<< z << " is greater than " << c << "\n";
+        }
+        else
+        {
+            cout<<"the sum "<< z << " is not greater than " << c << "\n";
+        }
+    }
+    
+    
+    
+    
+    
+}
+
+
+int main() 
+{
+    int a,b,c;
+
+    cout << "Enter numbers:\n ";
+    cin >> a >> b;
+    
+    cout << "Enter specific number\n";
+    cin >> c;
+    
+    tmp(a,b,c);
+    
+
+    return 0;
+}
+
+16.Write a C++ function that takes an integer as input and uses nested if-else 
+statements to determine if the number is prime and if it is less than a specific value.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+bool tmp(int a)
+{
+    if(a <= 1)
+    {
+        cout << "not prime";
+    }
+    
+    else
+    {
+        for (int i = 2; i <= a/2; i++)
+        {
+            if(a% i == 0)
+            {
+                return false;
+            }
+            
+        }
+        
+        return true;
+    }
+    
+}
+
+
+int main() 
+{
+    int a,b;
+
+    cout << "Enter number to check prime or not:\n ";
+    cin >> a;
+    
+    cout << "Enter specific number\n";
+    cin >> b;
+    
+    bool s = tmp(a);
+    
+    if(s)
+    {
+        cout<<"prime\n";
+    }
+    else
+    {
+        cout<<"not prime\n";
+    }
+    
+    if(a<b)
+    {
+        cout<<a<<" is less than "<<b;
+    }
+    else
+    {
+        cout <<a<<" is not less than "<<b;
+    }
+    
+
+    return 0;
+}
+
+17. Write a C++ function that takes an integer as input and uses nested if-else 
+statements to determine if the number is a strong number (sum of factorials of digits equals the number) or not
+
+#include<bits/stdc++.h>
+using namespace std;
+int factorial(int n)
+{
+    int fact=1;
+    for(int i=1;i<=n;i++)
+    {
+        fact*=i;
+    }
+    return fact;
+}
+
+int main()
+{
+    int n,lastdigit,sum=0,temp;
+    cin>>n;
+    temp=n;
+    while(n)
+    {
+        lastdigit = n%10;
+        sum+=factorial(lastdigit);
+        n/=10;
+    }
+    if(temp == sum)
+    {
+        cout<<"Strong Number";
+    }
+    else
+    {
+        cout<<"Not Strong number";
+    }
+}
+
+18. Write a C++ function that takes a four-digit number as input and uses 
+nested if-else statements to determine if it is a palindrome and if its digits form an arithmetic progression.
+
+#include<bits/stdc++.h>
+using namespace std;
+string palli(int a)
+{
+    int rem, sum = 0;
+    int tmp = a;
+    
+    while(a>0)
+    {
+        rem = a%10;
+        sum = sum*10+rem;
+        a = a/10;
+    }
+    
+    if (tmp == sum)
+    {
+        return "pallindrome";
+    }
+    else
+    {
+        return "not pallindrome";
+    }
+    
+}
+
+int main()
+{
+    int a;
+    cout<<"enter number\n";
+    cin>> a;
+    
+    string s = palli(a);
+    cout<<s;
+    
+}
+
+19. Write a C++ function that takes an integer as input and uses nested if-else 
+statements to determine if the number is divisible by 4, 5, or 6, and if it is also a prime number.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int num(int a)
+{
+    int flag = 0;
+   if(a%4 == 0 || a%5 == 0 || a%6 == 0)
+   {
+       cout<<"number is divisable and not prime\n";
+   }
+   else
+   {
+       for(int i=2;i<a;i++)
+        {
+            if(a%i==0)
+            {
+                flag=1;
+                break;
+            }
+        }
+        if(flag==1)
+        {
+            cout<<"not prime and divisable";
+    
+        }
+        else
+        {
+            cout<<"prime ";
+        }
+        
+       
+   }
+   
+  
+   
+
+}
+    
+
+
+int main()
+{
+    int a;
+    cout<<"enter number\n";
+    cin>> a;
+    
+    num(a);
+    
+}
+
+20. Write a C++ function that takes the lengths of three sides of a triangle as input and uses 
+nested if-else statements to determine if the triangle is a right triangle, isosceles right triangle, or neither.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+string triangle(int a, int b, int c)
+{
+   if ((a * a + b * b == c * c) || (a * c + c * c == b * b) || 
+        (b * b + c * c == a * a))
+    {
+        return "the triangle is right triangle";
+    }
+    
+    else if((a == b || b == c || a == c))
+    {
+        return "The triangle is an isosceles right triangle";
+    }
+    
+    else
+    {
+        return "The triangle is neither a right triangle nor an isosceles right triangle";
+    }
+    
+        
+}
+
+int main()
+{
+    int a,b,c;
+    cout<<"enter three sides of triangle\n";
+    
+    cout<<"enter side a ";
+    cin>> a;
+    
+    cout<<"enter side b ";
+    cin>> b;
+    
+    cout<<"enter side c ";
+    cin>> c;
+    
+    string s = triangle(a,b,c);
+    cout<<s;
+    
+    
+}
+
+21. Write a C++ function that takes the marks of a student in three subjects as input and 
+uses nested if-else statements to determine if the student passed all subjects, passed any one subject, or failed.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+string student(int a, int b, int c)
+{
+    int x = a+b+c;
+    cout<<"total numbres "<<x<<"\n";
+    
+    int y = 50;
+    
+    if(a>y && b>y && c>y)
+    {
+        return "pass all subject";
+    }
+    
+    else if(a>y || b>y || c>y)
+    {
+        return "pass 1 subjects";
+    }
+    else
+    {
+        return "fail";
+    }
+   
+    
+        
+}
+
+int main()
+{
+    int a,b,c;
+    cout<<"enter three subjects marks\n";
+    
+    cout<<"enter physics marks ";
+    cin>> a;
+    
+    cout<<"enter chemistry marks ";
+    cin>> b;
+    
+    cout<<"enter math marks ";
+    cin>> c;
+    
+    string s = student(a,b,c);
+    cout<<s;
+    
+    
+}
+
+22. Write a C++ function that takes an integer as input and uses nested if-else statements to 
+determine if the number is a perfect number (sum of divisors equals the number) or not
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void perfect(int a)
+{
+    int rem, sum = 0;
+    
+    for(int i = 1;i<a;i++)
+    {
+        rem = a%i;
+        cout<<rem<<"\n";
+        if(rem == 0)
+        {
+            sum = sum +i;
+            cout<<sum<<"\n";
+        }
+    }
+    
+    if(sum == a)
+    {
+        cout<< "perfect number ";
+    }
+    else
+    {
+        cout<< "not perfect number ";
+    }
+    
+        
+}
+
+int main()
+{
+    int a;
+    cout<<"enter number\n";
+    cin>>a;
+    
+    perfect(a);
+    
+    
+}
+
+23. Write a C++ function that takes a character as input and uses nested if-else statements 
+to determine if it is a vowel and if it is uppercase or lowercase, or if it is a consonant.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void perfect(int a)
+{
+    if(a=='a'||a=='e'||a=='i'||a=='o'||a=='u'||a=='A'||a=='E'||a=='I'||a=='O'||a=='U')
+    {
+        if(a >='A' && a <= 'Z')
+        {
+            cout<<"vowel and upper letter";
+        }
+        else
+        {
+            cout<<"vowel and lower letter";
+        }
+    }
+    
+    else
+    {
+        if(a >='A' && a <= 'Z')
+        {
+            cout<<"consonant and upper letter";
+        }
+        else
+        {
+            cout<<"consonant and lower letter";
+        }
+    }
+        
+    
+    
+    
+        
+}
+
+int main()
+{
+    char a;
+    cout<<"enter character\n";
+    cin>>a;
+    
+    perfect(a);
+}
+
+24. Write a C++ function that takes the year as input and uses nested if-else statements 
+to determine if it is a century year (ends with 00) and if it is a leap year.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+string perfect(int a)
+{
+    int x = 100;
+    
+    if(a%x == 0)
+    {
+        if(a%4 == 0)
+        {
+            return "centuray and leap year";
+        }
+       
+    }
+    else
+    {
+        if(a%4 == 0)
+        {
+            return " not centuray but leap year";
+        }
+        
+        else
+        {
+            
+            return "not centuary and not a leap year";
+        }
+    }
+          
+        
+}
+
+int main()
+{
+    int a;
+    cout<<"enter year\n";
+    cin>>a;
+    
+    string s = perfect(a);
+    cout<<s;
+}
+
+25. Write a C++ function that takes an integer as input and uses nested if-else statements to 
+determine if the number is a palindrome and if the sum of its digits is also a palindrome.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int palli(int a)
+{
+    int rem, sum = 0;
+    int tmp = a;
+    
+    while(a>0)
+    {
+        rem = a%10;
+        sum = sum*10+rem;
+        a = a/10;
+    }
+    
+    if (tmp == sum)
+    {
+        cout<< "pallindrome\n";
+    }
+    else
+    {
+        cout<< "not pallindrome\n";
+    }
+    
+    
+}
+
+int main()
+{
+    int a,b,c=0;
+    int rem, sum =0;
+    cout<<"enter number\n";
+    cin>> a;
+    
+    palli(a);
+    
+     while(a>0)
+    {
+        b = a%10;
+        c = c+b;
+        a = a/10; 
+    }
+    
+    cout<<"the sum of digits "<< c << "\n";
+    
+    int tmp1 = c;
+    
+    while(c>0)
+    {
+        rem = c%10;
+        sum = sum*10+rem;
+        c = c/10;
+    }
+    
+    if (tmp1 == sum)
+    {
+        cout<< "sum is pallindrome\n";
+    }
+    else
+    {
+        cout<< "sum is not pallindrome\n";
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
