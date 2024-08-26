@@ -1,0 +1,148 @@
+1. Create an array of integers with a size specified by
+the user.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int b;
+    cout<<"enter how many numbers u want to enter in array ";
+    cin>>b;
+    int arr[b];
+    
+    for(int i = 1;i<= b;i++)
+    {
+        cout<<"enter elements\n";
+        cin>>arr[i];
+    }
+    
+    for(int j = 1;j<=b;j++)
+    {
+        cout<<arr[j]<<" ";
+    }
+    
+    return 0;
+}
+
+
+
+
+3. Create a 2x2 matrix and a 2x2 matrix with user-
+defined values.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a,b;
+    cout<<"enter rows ";
+    cin>>a;
+    
+    cout<<"enter column ";
+    cin>>b;
+    int arr[a][b];
+    
+    
+    for (int i = 0;i<a;i++)
+    {
+        for (int j = 0; j<b;j++)
+        {
+            cout<<"enter elements "<<i <<" "<<j<<": ";
+            cin>>arr[i][j];
+        }
+        
+    }
+    
+    for (int i = 0;i<a;i++)
+    {
+        for (int j = 0; j<b;j++)
+        {
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+        
+    }
+        
+    return 0;
+}
+
+4. Implement and use a function to add two
+matrices.
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   int arr[2][2]={{10,20},{30,20}};
+   int arr1[2][2]= {{10,20},{30,20}};
+   int add[2][2];
+   
+    
+    
+    for (int i = 0;i<2;i++)
+    {
+        for (int j = 0; j<2;j++)
+        {
+            add[i][j] = arr[i][j] + arr1[i][j];
+            
+        }
+        
+    }
+    
+     for (int i = 0;i<2;i++)
+    {
+        for (int j = 0; j<2;j++)
+        {
+            cout<<add[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    
+        
+    return 0;
+}
+
+5. Implement and use a function to multiply two
+matrices.
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   int arr[2][2]={{10,20},{30,20}};
+   int arr1[2][2]= {{10,20},{30,20}};
+   int add[2][2];
+   
+    
+    
+    for (int i = 0;i<2;i++)
+    {
+        for (int j = 0; j<2;j++)
+        {
+            add[i][j] = arr[i][j] * arr1[i][j];
+            
+        }
+        
+    }
+    
+     for (int i = 0;i<2;i++)
+    {
+        for (int j = 0; j<2;j++)
+        {
+            cout<<add[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    
+        
+    return 0;
+}
+
+
+
