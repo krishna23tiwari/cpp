@@ -1,0 +1,395 @@
+1. finding an element in array
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a = 90;
+    int c = 0;
+    int arr[] = {10,20,30,5,50,60,70};
+    
+    for(int i = 1;i< 7;i++)
+    {
+        if(a==arr[i])
+        {
+            c = 1;
+            
+        }
+        
+    }
+    
+    if(c == 1)
+    {
+        cout<<"find";    
+        
+    }
+    else
+    {
+        cout<<"not";
+    }
+    
+    return 0;
+}
+
+2. finding max in array
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int arr[] = {10,20,30,5,50,60,70};
+    int max = arr[0];
+        
+    for(int i = 1;i< 7;i++)
+    {
+        if(max<arr[i])
+        {
+            max=arr[i];
+            
+        }
+
+        
+    }
+    cout<<max;
+    
+
+    
+    return 0;
+}
+
+3. findind minimum in array
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int arr[] = {10,20,30,5,50,60,70};
+    int min = arr[0];
+        
+    for(int i = 1;i< 7;i++)
+    {
+        if(min>arr[i])
+        {
+            min=arr[i];
+            
+        }
+
+        
+    }
+    cout<<min;
+    
+
+    
+    return 0;
+}
+
+4. sorting array in accending order
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int arr[] = {10,20,30,5,50,60,4,9,55,33};
+    
+    int b = sizeof(arr)/sizeof(arr[0]);
+    
+    for(int i = 0;i<b;i++)
+    {
+        for (int j = i; j<b; j++)
+        {
+            if(arr[i]>arr[j])
+            {
+                int tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;
+            }
+        }
+    }
+    
+    for (int i =0;i<b;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+   
+
+    
+    return 0;
+}
+
+5. sorting array in decending order
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int arr[] = {10,20,30,5,50,60,4,9,55,33,100,3};
+    
+    int b = sizeof(arr)/sizeof(arr[0]);
+    
+    for(int i = 0;i<b;i++)
+    {
+        for (int j = 0; j<b; j++)
+        {
+            if(arr[i]>arr[j])
+            {
+                int tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;
+            }
+        }
+    }
+    
+    for (int i =0;i<b;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+   
+
+    
+    return 0;
+}
+
+6. finding duplicate in array
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a,b;
+    int arr[] = {10,20,30,5,50,60,4,9,55,33,5,20};
+    a = end(arr)-begin(arr);
+    
+    for(int i = 0; i<a; i++)
+    {
+        for(int j = i+1; j<a; j++)
+        {
+            if(arr[i] == arr[j])
+            {
+                cout<<arr[i]<<" ";
+            }
+        }
+    }
+       
+}
+
+7. finding how many times a partiucular elements comes in array
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a,b = 0;
+    int arr[5];
+    cout<<"enter elements ";
+    
+    for(int i = 0; i<5;i++)
+    {
+        cin>>arr[i];
+    }
+    
+    cout<<"enter which element u want to find ";
+    cin>>a;
+    
+    for(int i = 0; i<5; i++)
+    {
+        if(arr[i] == a)
+        {
+            b += 1;
+        }
+    }
+    
+    cout<<"the number count is " << b; 
+    
+    
+ 
+ return 0;   
+    
+}
+
+8. printing array in reverse
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a,b = 0;
+    int arr[5] = {1,2,6,5,8};
+    
+    for(int i = 4; i>=0; i--)
+    {
+        cout<<arr[i]<<" ";
+    }
+        
+
+ return 0;   
+    
+} 
+
+9. find the second largest number
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a,b = 0;
+    int arr[5] = {1,9,6,3,8};
+    
+    for(int i = 0; i<5; i++)
+    {
+        for(int j = i; j<5; j++)
+        {
+            if(arr[i]>arr[j])
+            {
+                int tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;
+            }   
+        }
+    }
+    
+    for(int i = 0; i<5; i++)
+    {
+        cout<<arr[i]<<" "<<"\n";
+    }
+    
+    cout<<"second largest is "<<arr[2]<<" ";
+        
+    
+    
+    
+ 
+ return 0;   
+    
+}
+
+10. asking user a number and print all the higher number from user input
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a,b = 0;
+    int arr[5] = {1,9,6,3,8};
+    
+    cout<<"enter number ";
+    cin>>a;
+    
+    for(int i = 0; i<5; i++)
+    {
+        if(arr[i]>a)
+        {
+            cout<<arr[i]<<" ";
+        }
+    }
+    
+ 
+ return 0;   
+    
+}
+
+11. finding missing element in sequence of array
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a,b = 0;
+    int arr[] = {1,2,3,5,7,9,11};
+    
+    a = end(arr)-begin(arr);
+    
+    for(int i = 0; i<a; i++)
+    {
+        b += 1;
+        if(b!=arr[i])
+        {
+            cout<<b<<" ";
+            b += 1; 
+        }
+       
+                
+    }
+        
+    
+ return 0;   
+    
+}
+
+12. asking user a sum and finding the elements of array which will give us sum of that array number
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a,b,c=0;
+    int arr[] = {1,2,3,5,7,9,11};
+    
+    cout<<"enter sum ";
+    cin>>a;
+    
+    b = end(arr)-begin(arr);
+    
+    for(int i = 0; i<b; i++)
+    {
+        for(int j = 0; j<b; j++)
+        {
+            if(arr[i]+arr[j]==a)
+            {
+                cout<<arr[i]<<" "<<arr[j]<<endl;
+                c += 1;
+                
+            }
+        }
+       
+                
+    }
+    cout<<c;
+        
+    
+ return 0;   
+    
+}
+
+13. findind maximum in a sequence of array
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a,b;
+    int arr[] = { -2, -3, 4, -1, -2, 1, 5, -3 };
+    int max= INT_MIN;
+    cout<<max<<endl;
+    a = end(arr)-begin(arr);
+    
+    for(int i = 0; i<a; i++)
+    {
+        b = 0;
+        for(int j =i; j<a;j++)
+        {
+            b += arr[j];
+            if(b>max)
+            {
+                max = b;
+            }
+        }
+    }
+    cout<<"max is "<<max;
+    
+}
+
+
+
