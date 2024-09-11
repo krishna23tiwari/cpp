@@ -1,0 +1,115 @@
+1.  Create a class Book with private attributes title and author.
+ Implement a constructor to initialize these attributes and a    member function to display them.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Book 
+{
+    private:
+    string title;
+    string author;
+
+public:
+
+    Book(string t,string a) : title(t), author(a) {}
+
+    void display() 
+    {
+        cout << "Title: " << title << endl;
+        cout << "Author: " << author << endl;
+    }
+};
+
+int main() {
+
+    Book obj("The Three Musketeers", "Alexandre Dumas");
+
+    obj.display();
+
+    return 0;
+}
+
+
+
+
+2.  Create a class Point with attributes x and y. Provide a default constructor that initializes both
+attributes to zero.
+        a)Modify the Point class to include a parameterized constructor    that initializes x and y with given values.
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+class Point {
+private:
+    int x, y;
+
+public:
+    Point() : x(0), y(0) {}
+
+    Point(int x, int y) : x(x), y(y) {}
+
+    void display() 
+    {
+        cout << "Point(" << x << ", " << y << ")" << endl;
+    }
+};
+
+int main() {
+    Point obj;
+    obj.display();
+
+    Point p2(5, 10);
+    p2.display();
+
+    return 0;
+}
+
+
+3. Create a class Student with a destructor that prints a message when an object is destroyed.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+class Student 
+{
+private:
+    string name;
+
+public:
+    
+    Student(string studentName) : name(studentName) 
+    {
+        cout <<"name "<< name <<" created"<< endl;
+    }
+
+    ~Student() 
+    {
+        cout << "name "<< name <<" delete" << endl;
+    }
+
+    void display()
+    {
+        cout << "name "<< name << endl;
+    }
+};
+
+int main() 
+{
+    Student obj("Ravi");
+    obj.display();
+
+    return 0;
+}
+
+    
+    
+    
+
+    
+    
+    
+
