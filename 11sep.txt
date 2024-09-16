@@ -1,0 +1,533 @@
+1. program to find prime or not prime if 
+user enter 1 and if user enters 2 call a function to check whether it is even or odd.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int prime(int a)
+{
+    int x = 0;
+    if(a == 1 || a == 2)
+    {
+        cout<<"prime";
+    }
+    
+    for(int i = 3; i<a; i++)
+    {
+        if(a%i==0)
+        {
+            x = 1;
+        }
+    }
+    
+    if(x == 1)
+    {
+        cout<<"not prime";
+    }
+    
+    else
+    {
+        cout<<"prime ";
+    }
+}
+
+int evenodd(int a)
+{
+    if(a%2==0)
+    {
+        cout<<"even";
+    }
+    else
+    {
+        cout<<"odd";
+    }
+}
+
+
+int main()
+{
+    int a,b;
+    cout<<"enter number ";
+    cin>>a;
+    
+    cout<<"now type 1 for prime no check or 2 for even odd ";
+    cin>>b;
+    
+    if(b==1)
+    {
+        prime(a);
+    }
+    else if(b==2)
+    {
+        evenodd(a);
+    }
+    else
+    {
+        cout<<"wrong input ";
+    }
+    
+    return 0;
+    
+}
+
+2.mujhe user se ek string input mai lena hai agr wo mon-sat weekday sun holiday invalid day
+
+#include<bits/stdc++.h>
+using namespace std;
+
+string week(string a)
+{
+    if (a == "mon" || a == "tue" || a == "wed" || a == "thu" || a == "fri" || a == "sat" || a == "monday" || a == "tuesday" || a == "wednesday" || a == "thursday" || a == "friday" || a == "saturday" )
+    {
+        cout<<"weedays";
+    }
+    else if(a == "sun" || a == "sunday")
+    {
+        cout<<"holiday";
+    }
+    else
+    {
+        cout<<"wrong input";
+    }
+}
+
+
+
+int main()
+{
+    string a;
+    cout<<"enter string: ";
+    cin>>a;
+    
+    week(a);
+    
+    return 0;
+    
+}
+
+3. 3.user product ek string enter karega
+LUx Lux LuX = Soap
+ViVel  =Soap
+lIFEbOUY =soap
+
+gooday =biscuit
+snacks = biscuit
+marigold = biscuit
+
+Axe = perfume
+Vellavita =perfume
+fog = perfume
+
+#include<bits/stdc++.h>
+using namespace std;
+
+string week(string a)
+{
+    if (a == "LUX" || a == "LUx" || a == "Lux" || a == "lux" || a == "LuX" || a == "ViVel" || a == "vivel" || a == "Vivel" || a == "Lifebouy" || a == "Lifeboy" || a == "LIFEbOUY" || a == "lifeboy" )
+    {
+        cout<<"soap";
+    }
+    else if(a == "goodday" || a == "gooday" || a == "snacks" || a =="Snacks" || a =="MArigold" || a == "marigold" || a == "Marigold" || a == "MariGold")
+    {
+        cout<<"biscut";
+    }
+    
+    else if(a == "AXE" || a == "Axe" || a == "axe" || a == "Vellavita" || a == "vellavita" || a == "VellaVita")
+    {
+        cout<<"perfume";
+    }
+    
+    else
+    {
+        cout<<"wrong input";
+    }
+}
+
+
+
+int main()
+{
+    string a;
+    cout<<"enter string: ";
+    cin>>a;
+    
+    week(a);
+    
+    return 0;
+    
+}
+
+4.agar user input karta hai a e i o u vowel or else constants 0 1 2 3 4 5 numbers  #$%^&*(()!>:<) special characters
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void vowelconso(char a)
+{
+    if (a == 'a' || a == 'e' || a == 'i' || a == 'o' || a == 'u' || a == 'A' || a == 'E' || a == 'I' || a == 'O' || a == 'U')
+    {
+        cout<<"Vowel";
+    }
+    
+    else if (((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z')))
+    {
+        cout<<"Consonant";
+    }
+    
+    else if (a >= '0' && a <= '9')
+    {
+        cout<<"numbers";
+    }
+    
+    else
+    {
+        cout<<"Special character";
+    }
+}
+
+
+
+int main()
+{
+    char a;
+    cout<<"enter string: ";
+    cin>>a;
+    
+    vowelconso(a);
+    
+    return 0;
+    
+}
+
+
+5.agar user ki age 0-5 "child" 6-12 "young age" 13-19 "teenage" 20-50 "middle age" greater than 51 "senior citizen"
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int age(int a)
+{
+    if (a >= 0 && a <= 5)
+    {
+        cout<<"Child";
+    }
+    
+    else if (a >= 6 && a <= 12)
+    {
+        cout<<"young age";
+    }
+    
+    else if (a >= 13 && a <= 19)
+    {
+        cout<<"Teenage";
+    }
+    
+    else if (a >= 20 && a <= 50)
+    {
+        cout<<"Middle age";
+    }
+    
+    
+    else
+    {
+        cout<<"Senior citizen";
+    }
+}
+
+
+
+int main()
+{
+    int a;
+    cout<<"enter age: ";
+    cin>>a;
+    
+    age(a);
+    
+    return 0;
+    
+}
+
+6.if agar user ne input kiya hai
+  1 then ek function call karna hai A() ===> A is printed uske andar ek aur function call karna hai and call function D() and "print I am D"
+  2 then ek function call karna hai B() ===> B is printed 
+
+and call function E() and "print I am E"
+  3 then ek function call karna hai C() ===> C is printed 
+
+and call function F() and "print I am F"
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+void D()
+{
+    cout<<"d is here";
+}
+
+
+void A()
+{
+    cout<<"a is here"<<endl;
+    
+    D();
+   
+}
+
+void E()
+{
+    cout<<"i am E";
+}
+
+void B()
+{
+    cout<<"B is here"<<endl;
+    
+    E();
+}
+
+void F()
+{
+    cout<<"F is here"<<endl;
+    
+}
+
+
+void C()
+{
+    cout<<"B is here"<<endl;
+    
+    F();
+}
+
+
+
+
+
+
+
+int main()
+{
+    int a;
+    cout<<"enter number: ";
+    cin>>a;
+    
+    if(a == 1)
+    {
+        A();
+    }
+    
+    else if(a == 2)
+    {
+        B();
+    }
+    
+    else if(a == 3)
+    {
+        C();
+    }
+    
+    else
+    {
+        cout<<"wrong input ";
+    }
+    
+    return 0;
+    
+}
+
+7. user se ek input lena hai agar wo input ek vowel hota hai to ek function run karna A() ==>A is printed
+    wo input consonant hota hai to function B() ===> B is printed
+    wo input 0 1 2 3 4 5 function C() ===> c is printed
+    wo #$%^&&**(( )) function D() ===> D is printed
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+void A() 
+{
+    cout << "A is printed" << endl;
+}
+
+
+void B() 
+{
+    cout << "B is printed" << endl;
+}
+
+
+void C() 
+{
+    cout << "C is printed" << endl;
+}
+
+void D() 
+{
+    cout << "D is printed" << endl;
+}
+
+int main() 
+{
+    char a;
+
+    cout << "Enter a character: ";
+    cin >> a;
+
+    if (a == 'a' || a == 'e' || a == 'i' || a == 'o' || a == 'u' ||
+        a == 'A' || a == 'E' || a == 'I' || a == 'O' || a == 'U') 
+    {
+        A(); 
+    }
+    
+    else if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z')) 
+    {
+        B(); 
+    }
+    else if (a >= '0' && a <= '5') 
+    {
+        C();
+    }
+    else 
+    {
+        D(); 
+    }
+
+    return 0;
+}
+
+
+8. User se 3 input lena hai, un calculate karna hai sum nikalna hai
+    if agar wo sum even hota hai print karna hai even, odd hota hai to print karna hai odd
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+    int a,b,c,d;
+    cout<<"enter 3 numbers\n ";
+    cin>>a >> b >> c;
+    
+    d = a+b+c;
+    
+    if(d%2==0)
+    {
+        cout<<"even";
+    }
+    else
+    {
+        cout<<"odd";
+    }
+    
+    
+    return 0;
+}
+
+9. user se 4 input lena hai un ka product nikalna hai agar wo product even hota hai to fir ek function call karna hai aur 
+usme A is printed likhna hai. agar wo product odd hota hai to fir ek dusra function call hoga aur usme B is printed.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void A() 
+{
+    cout << "A is printed" << endl;
+}
+
+void B() 
+{
+    cout << "B is printed" << endl;
+}
+
+
+int main()
+{
+    int a,b,c,d, product;
+    cout<<"enter 4 numbers\n ";
+    cin>>a >> b >> c >>d;
+    
+    product = a*b*c*d;
+    
+    if(product%2==0)
+    {
+        A();
+    }
+    else
+    {
+        B();
+    }
+    
+    
+    return 0;
+}
+
+
+10.user se 3 input lena hai, unka sum nikalna hai ab agar wo sum even hota hai then last 3 input mai se 
+jo max tha uska answer batana hai
+   Aur agar sum odd hai fir un tino number ka product(multiplication) nikalna hai
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int A(int a,int b, int c) 
+{
+    if(a>b && a>c)
+    {
+       cout<<a<<" is greater";
+    }
+    else if(b>a && b>c)
+    {
+        
+        cout<<b<<" is greater";
+    }
+    
+    else
+    {
+        cout<<c<<" is greater";  
+    }
+}
+
+int B(int a,int b, int c) 
+{
+    int x;
+    
+    x = a*b*c;
+    
+    cout<<x<<" is product";
+}
+
+
+int main()
+{
+    int a,b,c,d;
+    cout<<"enter numbers\n ";
+    cin>>a >> b >> c;
+    
+    d = a+b+c;
+    
+    if(d%2==0)
+    {
+        A(a,b,c);
+    }
+    else
+    {
+        B(a,b,c);
+    }
+    
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
