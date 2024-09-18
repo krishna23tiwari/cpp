@@ -1,0 +1,578 @@
+function countHalves(n) {
+    let count = 0;
+    while (n > 0) {
+        n = Math.floor(n / 2);
+        count++;
+    }
+    return count;
+}
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n;
+    int count = 0;
+    cout << "Enter a number: ";
+    cin >> n;
+    
+    while(n>0)
+    {
+        n = n/2;
+        cout<<n<<" ";
+        count++;
+        cout<<count<<" "<<endl;
+    }
+    
+    
+    return 0;
+}
+
+---------------------------------------------------------------------------------------------------------
+
+function powerOfTwo(n) {
+    while (n > 1) {
+        n /= 2;
+    }
+}
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n;
+    int count = 0;
+    cout << "Enter a number: ";
+    cin >> n;
+    
+    while(n%2==0)
+    {
+        n /= 2;
+        cout<<n<<" ";
+        count++;
+        cout<<count<<" "<<endl;
+    }
+    
+    (n==1)?cout<<"power of 2":cout<<"not power of 2";
+    
+    
+    return 0;
+}
+
+-----------------------------------------------------------------------------------------------------------------------
+
+function logarithmicPrint(n) {
+    for (let i = 1; i < n; i *= 2) {
+        console.log(i);
+    }
+}
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n;
+    int i = 1;
+    int count = 0;
+    cout << "Enter a number: ";
+    cin >> n;
+    
+    while(i<n)
+    {
+        cout<<i<<endl;
+        i*=2;
+    }
+    
+    
+    
+    return 0;
+}
+
+-------------------------------------------------------------------------------------------------------------------
+
+function decreasingHalves(n) {
+    for (let i = n; i > 1; i = Math.floor(i / 2)) {
+        console.log(i);
+    }
+}
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n;
+    int count = 0;
+    cout << "Enter a number: ";
+    cin >> n;
+    
+    for(int i = n; i>1; i=i/2)
+    {
+        cout<<i<<" ";
+        cout<<count<<endl;
+        count++;
+    }
+    
+    
+    
+    return 0;
+}
+
+------------------------------------------------------------------------------------------------------------------------
+function divideByThree(n) {
+    while (n > 1) {
+        n = Math.floor(n / 3);
+    }
+}
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n;
+    int count = 0;
+    cout << "Enter a number: ";
+    cin >> n;
+    
+    while(n%3==0)
+    {
+        n = n/3;
+        cout<<n<<" ";
+        cout<<count<<endl;
+        count++;
+    }
+    
+    (n==1)?cout<<"power of 3":cout<<"not power of 3";
+    
+    
+    
+    return 0;
+}
+
+-------------------------------------------------------------------------------------------------------------------
+function logPowerPrint(n) {
+    for (let i = 1; i <= n; i *= 3) {
+        console.log(i);
+    }
+}
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n;
+    int count = 0;
+    cout << "Enter a number: ";
+    cin >> n;
+    
+    
+    for(int i = 1; i<=n; i*=3)
+    {
+        cout<<i<<" ";
+        cout<<count<<endl;
+        count++;
+    }
+    
+    
+    
+    return 0;
+}
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+function logSearch(n) {
+    let start = 1;
+    while (start < n) {
+        start *= 2;
+    }
+}
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n;
+    int count = 1;
+    cout << "Enter a number: ";
+    cin >> n;
+    
+    while(count<n)
+    {
+        count*=2;
+        cout<<count<<endl;
+    }
+    
+  
+    
+    
+    
+    return 0;
+}
+
+--------------------------------------------------------------------------------------------------------------
+
+
+function halveAndCount(n) {
+    let count = 0;
+    while (n > 1) {
+        n = Math.floor(n / 2);
+        count++;
+    }
+    return count;
+}
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n;
+    int count = 0;
+    cout << "Enter a number: ";
+    cin >> n;
+    
+    while(n>1)
+    {
+        n /= 2;
+        cout<<n<<" ";
+        cout<<count<<endl;
+        count++;
+    }
+    
+  
+    
+    
+    
+    return 0;
+}
+
+------------------------------------------------------------------------------------------------------------------
+
+function nestedHalving(n) {
+    while (n > 1) {
+        n = Math.floor(Math.sqrt(n));
+    }
+}
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n;
+    int count = 0;
+    cout << "Enter a number: ";
+    cin >> n;
+    
+    while(n>1)
+    {
+        n = static_cast<int>(sqrt(n));
+        cout<<n<<" ";
+        cout<<count<<endl;
+        count++;
+    }
+    
+  
+    
+    
+    
+    return 0;
+}
+
+------------------------------------------------------------------------------------------------------------
+
+
+
+function logLogGrowth(n) {
+    let count = 0;
+    for (let i = 2; i < n; i = Math.pow(i, 2)) {
+        count++;
+    }
+}
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n;
+    int count = 0;
+    cout << "Enter a number: ";
+    cin >> n;
+    
+   for(int i = 2; i<n; i= i*i)
+   {
+       cout<<i<<" ";
+       cout<<count<<endl;
+       count++;
+      
+   }
+    
+  
+    
+    
+    
+    return 0;
+}
+
+
+------------------------------------------------------------------------------------------------------------------
+
+function doubleSqrtSearch(n) {
+    while (n > 2) {
+        n = Math.sqrt(Math.sqrt(n));
+    }
+}
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    double n;
+    int count = 0;
+    cout << "Enter a number: ";
+    cin >> n;
+    
+   while(n>2)
+   {
+       n = sqrt(sqrt(n));
+       cout<<n<<" ";
+       cout<<count<<endl;
+       count++;
+      
+   }
+    
+  
+    
+    
+    
+    return 0;
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+function squareRootLoop(n) {
+    let i = Math.sqrt(n);
+    while (i >= 2) {
+        i = Math.sqrt(i);
+    }
+}
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    double n,i;
+    int count = 0;
+    cout << "Enter a number: ";
+    cin >> n;
+    
+    i = sqrt(n);
+    cout<<i<<endl;
+    
+   while(i>=2)
+   {
+       i = sqrt(i);
+       cout<<i<<" ";
+       cout<<count<<endl;
+       count++;
+      
+   }
+    
+  
+    
+    
+    
+    return 0;
+}
+
+----------------------------------------------------------------------------------------------------------------------
+
+function sqrtDecrement(n) {
+    for (let i = n; i >= 2; i = Math.sqrt(i)) {
+        console.log(i);
+    }
+}
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    double n;
+    int count = 0;
+    cout << "Enter a number: ";
+    cin >> n;
+    
+    
+   while(n>=2)
+   {
+       cout<<n<<" ";
+       n = sqrt(n);
+       cout<<count<<endl;
+       count++;
+      
+   }
+    
+    
+    return 0;
+}
+
+----------------------------------------------------------------------------------------------------------------------
+
+function doubleSquareRoot(n) {
+    while (n > 1) {
+        n = Math.sqrt(n);
+        n = Math.sqrt(n);
+    }
+}
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    double n, count = 0;
+    double i;
+    cout<<"enter number ";
+    cin>>n;
+    
+    while(n>1)
+    {
+        n = sqrt(n);
+        n = sqrt(n);
+        cout<<n<<" ";
+        cout<<count<<endl;
+        count++;
+    }
+    
+    return 0;
+}
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+function halveThenSquareRoot(n) {
+    while (n > 1) {
+        n = Math.floor(n / 2);
+        n = Math.sqrt(n);
+    }
+}
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    double n, count = 0;
+    double i;
+    cout<<"enter number ";
+    cin>>n;
+    
+    while(n>1)
+    {
+        n = floor(n/2);
+        n = sqrt(n);
+        cout<<n<<" ";
+        cout<<count<<endl;
+        count++;
+    }
+    
+    return 0;
+}
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+function twoLayerLog(n) {
+    while (n > 1) {
+        n = Math.floor(Math.log2(n));
+    }
+}
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    double n, count = 0;
+    double i;
+    cout<<"enter number ";
+    cin>>n;
+    
+    while(n>1)
+    {
+        n = floor(log2(n));
+        cout<<n<<" ";
+        cout<<count<<endl;
+        count++;
+    }
+    
+    return 0;
+}
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+function repeatedLogAndSquare(n) {
+    while (n > 2) {
+        n = Math.log2(Math.sqrt(n));
+    }
+}
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    double n, count = 0;
+    double i;
+    cout<<"enter number ";
+    cin>>n;
+    
+    while(n>1)
+    {
+        n = log2(sqrt(n));
+        cout<<n<<" ";
+        cout<<count<<endl;
+        count++;
+    }
+    
+    return 0;
+}
+
+
+---------------------------------------------------------------------------------------------------------------
+
+
