@@ -1,0 +1,203 @@
+1.A vending machine only accepts coins of 10, 5, and 1 rupees. Write a program that takes any 
+amount X and returns the fewest number of coins needed to make the amount.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a=10,b=5,c=1, x;
+    int total = 0;
+    cout<<"enter amount: ";
+    cin>>x;
+    int ten = 0, five = 0, one =0; 
+    
+    for(int i =0; i<1;i++)
+    {
+        ten = x/a;
+        x = x % a;
+        
+        five = x/b;
+        x = x % b;
+        
+        one = x/c;
+    }
+    
+    total = d + e + f;
+    
+    cout<<total<<endl;
+    cout<<"10 rs coin: "<<d<<endl;
+    cout<<"5 rs coin: "<<e<<endl;
+    cout<<"1 rs coin: "<<f<<endl;
+    
+    return 0;
+}
+
+-----------------------------------------------------------------------------------------------------------------------
+
+2.A person wants to save a total of X rupees by depositing an amount that doubles every day, 
+starting from 1 rupee. Write a program to find out how many days it will take to save at least X rupees.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a = 1;
+    int  x;
+    cout<<"enter amount: ";
+    cin>>x;
+    int day = 0;
+    int total = 0;
+    
+    for(int i =0; total<x; i++)
+    {
+        total += a;
+        a *= 2;
+        day++;
+
+    }
+    
+    cout<<"days: "<<day<<endl<<"amount: "<<x;
+    
+}
+
+-----------------------------------------------------------------------------------------------------------------------
+
+3.You have N chocolates, and you want to distribute them among M children.
+ Each child must get at least 1 chocolate. Distribute the chocolates in a way 
+that the difference between the child who gets the most chocolates and the child who gets the fewest is minimized.
+ Write a loop-based solution to distribute the chocolates.
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+4.A person runs N kilometers every day, but their speed decreases by 10% every day.
+ Write a program that calculates how many days it will take for the person’s daily distance to 
+be less than K kilometers.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    float n, k;
+
+    cout << "Enter n : ";
+    cin >> n;
+
+    cout << "Enter k : ";
+    cin >> k;
+
+    if (n < k)
+    {
+        cout << "INVALID INPUT";
+        return 0;
+    }
+
+    int day = 0;
+
+    while (n >= k)
+    {
+        n *= 0.9;
+        day++;
+    }
+
+    cout << day <<" days";
+
+    return 0;
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+5. Write a program to calculate the factorial of a number N using loops, 
+but the twist is that the program should skip calculating the factorial for all numbers divisible by 3.
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,x;
+    cout<<"enter number: ";
+    cin>>n;
+    int fact = 1;
+    
+    for(int i = 1; i<=n; i++)
+    {
+        if(i % 3 == 0)
+        {
+            
+            continue;
+        }
+        else
+        {
+            fact *= i;
+        }
+    }
+    
+    cout<<"factorial: "<<fact<<endl;
+    
+}
+
+-------------------------------------------------------------------------------------------------------------------------
+
+6.A shop sells books, where each book costs either 120, 50, or 20 rupees. 
+For a given amount X, use loops to find how many books the person can buy with an exact match 
+of the amount using any combination of these prices.
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int amount;
+    int book120 = 0, book50 = 0, book20 = 0;
+
+    cout << "Enter amount : ";
+    cin >> amount;
+
+    while (amount >= 120)
+    {
+        book120++;
+        amount -= 120;
+    }
+
+    while (amount >= 50)
+    {
+        book50++;
+        amount -= 50;
+    }
+
+    while (amount >= 20)
+    {
+        book20++;
+        amount -= 20;
+    }
+
+    cout << "Number of 120rs books : " << book120 << endl;
+    cout << "Number of 50rs books : " << book50 << endl;
+    cout << "Number of 20 books : " << book20 << endl;
+    cout<<"Total number of books : "<<book120+book50+book20;
+    
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
