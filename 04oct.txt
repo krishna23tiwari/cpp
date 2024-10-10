@@ -24,7 +24,8 @@ vector<int> vec = {1, 2, 3, 4, 5};
 --------------------------------------------------------------------------------------------------------------------
 
 
-4. Create a vector of floating-point numbers and fill it with 10 values entered by the user.
+4. Create a vector of floating-point numbers and fill it with 10 valu.
+es entered by the user.
 
 vector<float> vec(10);
 void fillFloatVector(vector<float> &vec) {
