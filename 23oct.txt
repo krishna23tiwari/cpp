@@ -1,0 +1,325 @@
+1.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string trackingNumber = "ORD12345098765";
+    string postalCode = trackingNumber.substr(trackingNumber.length() - 6);
+    cout << postalCode << std::endl;
+    return 0;
+}
+
+-----------------------------------------------------------------------------------------------------------------
+
+2.
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string amountStr = "5000";
+    int amountInt = std::stoi(amountStr);
+    cout << amountInt << std::endl;
+    return 0;
+}
+
+------------------------------------------------------------------------------------------------------------------
+
+3. 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string contact = "Contact: 123-456-7890";
+    string phone = contact.substr(9, 12);
+    phone.erase(remove(phone.begin(), phone.end(), '-'), phone.end());
+    int phoneNumber = stoi(phone);
+    cout << phoneNumber << endl;
+    return 0;
+}
+
+------------------------------------------------------------------------------------------------------------------
+
+4. 
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int amount = 5000;
+    float amountFloat = static_cast<float>(amount);
+    cout << amountFloat << endl;
+    return 0;
+}
+
+------------------------------------------------------------------------------------------------------------------
+
+5. 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    float price = 45.67;
+    string priceStr = to_string(price);
+    cout << priceStr << endl;
+    return 0;
+}
+
+------------------------------------------------------------------------------------------------------------------
+
+6. 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string priceStr = "34.56";
+    float priceFloat = stof(priceStr);
+    cout << priceFloat << endl;
+    return 0;
+}
+
+------------------------------------------------------------------------------------------------------------------
+
+7. 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string priceStr = "34.56";
+    float decimalPart = stof(priceStr) - static_cast<int>(stof(priceStr));
+    cout << decimalPart << endl;
+    return 0;
+}
+
+------------------------------------------------------------------------------------------------------------------
+
+8. 
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string studentID = "STUD98765";
+    char character = studentID[4];
+    cout << character << endl;
+    return 0;
+}
+
+-------------------------------------------------------------------------------------------------------------------
+
+9. 
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string firstName = "Alice";
+    string phoneNumber = "1234567890";
+    string uniqueCode = firstName.substr(0, 3) + phoneNumber.substr(phoneNumber.length() - 4);
+    cout << uniqueCode << endl;
+    return 0;
+}
+
+------------------------------------------------------------------------------------------------------------------
+
+10. 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string salesStr = "1000,2000,3000";
+    vector<int> sales;
+    stringstream ss(salesStr);
+    string temp;
+
+    while (getline(ss, temp, ',')) {
+        sales.push_back(stoi(temp));
+    }
+
+    for (int num : sales) {
+        cout << num << " ";
+    }
+    cout << endl;
+    return 0;
+}
+
+----------------------------------------------------------------------------------------------------------------
+
+11. 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string timeStr = "08:30";
+    int hours = stoi(timeStr.substr(0, 2));
+    int minutes = stoi(timeStr.substr(3, 2));
+    float totalHours = hours + minutes / 60.0;
+    cout << totalHours << endl;
+    return 0;
+}
+
+------------------------------------------------------------------------------------------------------------------
+
+12. 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string productID = "PROD12345";
+    string numericPart = productID.substr(4);
+    int productInt = stoi(numericPart);
+    cout << productInt << endl;
+    return 0;
+}
+
+-----------------------------------------------------------------------------------------------------------------
+
+13.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string email = "john.doe@example.com";
+    size_t index = email.find('@');
+    cout << index << endl;
+    return 0;
+}
+
+--------------------------------------------------------------------------------------------------------------------
+
+14. 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    vector<int> weights = {10, 20, 30};
+    string result;
+
+    for (size_t i = 0; i < weights.size(); ++i) {
+        result += std::to_string(weights[i]);
+        if (i < weights.size() - 1) {
+            result += ",";
+        }
+    }
+
+    cout << result << endl;
+    return 0;
+}
+
+-------------------------------------------------------------------------------------------------------------------
+
+15.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string ticketNumber = "ABC123XYZ";
+    string numericPart = ticketNumber.substr(3, 3);
+    reverse(numericPart.begin(), numericPart.end());
+    cout << numericPart << endl;
+    return 0;
+}
+
+------------------------------------------------------------------------------------------------------------------
+
+16.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string ratingStr = "4.85";
+    float ratingFloat = stof(ratingStr);
+    cout << ratingFloat << endl;
+    return 0;
+}
+
+
+------------------------------------------------------------------------------------------------------------------
+
+17.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string dateStr = "15-09-2024";
+    int day = stoi(dateStr.substr(0, 2));
+    cout << day << endl;
+    return 0;
+}
+
+-----------------------------------------------------------------------------------------------------------------
+
+18.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    float value = 2.4567;
+    ostringstream out;
+    out << fixed << setprecision(2) << value;
+    string roundedStr = out.str();
+    cout << roundedStr << endl;
+    return 0;
+}
+
+------------------------------------------------------------------------------------------------------------------
+
+19. 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string message = "Hello, how can I help you?";
+    string firstWord = message.substr(0, message.find(' '));
+    cout << firstWord << endl;
+    return 0;
+}
+
+-----------------------------------------------------------------------------------------------------------------
+
+20. 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    float orderAmount = 23.50;
+    int wholeNumber = static_cast<int>(orderAmount);
+    string wholeStr = to_string(wholeNumber);
+    cout << wholeStr << endl;
+    return 0;
+}
+
+
+
