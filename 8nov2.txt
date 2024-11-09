@@ -1,0 +1,33 @@
+2. Calculate the sum of array and subtract it from all the multiple of 2's 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    vector<int> arr = {4, 2, 3, 1, 8, 10, 5};
+
+    int sum = 0;
+    for (int num : arr) 
+    {
+        sum += num;
+    }
+
+    cout << "Sum of array: " << sum << endl;
+
+    for (int i = 0; i < arr.size(); ++i) 
+    {
+        if (arr[i] % 2 == 0) {
+            arr[i] -= sum;
+        }
+    }
+
+    cout << "Modified array: ";
+    for (int num : arr) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
