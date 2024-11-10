@@ -1,0 +1,18 @@
+3.Remove duplicate from an array [1,1,1,2,2,3,4].
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<int> arr = {1, 1, 1, 2, 2, 3, 4};
+    sort(arr.begin(), arr.end());
+    arr.erase(unique(arr.begin(), arr.end()), arr.end());
+
+    for (int num : arr) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
