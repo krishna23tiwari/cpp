@@ -1,0 +1,33 @@
+7.Given an array of integers check if every element of an array stastify a condition like all numbers of an array is even then return true otherwise false.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+bool areAllEven(vector<int>& arr) 
+{
+    for (int num : arr) 
+    {
+        if (num % 2 != 0) 
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+int main() 
+{
+    vector<int> arr = {2, 4, 6, 8, 10};
+
+    if (areAllEven(arr)) 
+    {
+        cout << "All numbers are even." << endl;
+    } 
+    else 
+    {
+        cout << "Not all numbers are even." << endl;
+    }
+
+    return 0;
+}
+
