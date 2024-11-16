@@ -40,4 +40,4 @@ int main()
     cout<<"Numbers of ways to divide the chocolate: "<<result <<endl;
     
     return 0;
-}
+}	
