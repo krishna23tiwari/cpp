@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int dividesum(int n, int k, vector<int>& arr)
+{
+    int count = 0;
+    for(int i = 0; i<n; i++)
+    {
+        for(int j = i+1; j<n; j++)
+        {
+            if((arr[i] + arr[j]) % k == 0)
+            {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+int main()
+{
+    int n, k;
+    cout<<"Enter the number of elements: ";
+    cin>>n;
+    cout<<"Enter the divisor: ";
+    cin>>k;
+    
+    vector<int> arr(n);
+    cout<<"Enter the element of array: ";
+    for(int i = 0; i<n; i++)
+    {
+        cin>>arr[i];
+    }
+    
+    int result = dividesum(n,k,arr);
+    cout<<"Number of divisable sum pairs: "<< result <<endl;
+    
+    return 0;
+}
