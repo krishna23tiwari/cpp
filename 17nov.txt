@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+string timeConversion(string &s)
+{
+
+    string period = s.substr(s.size() - 2);
+    string hour = s.substr(0, 2);
+    string minutes_seconds = s.substr(2, 6); 
+
+    int hourInt = stoi(hour); 
+
+    if (period == "AM") 
+    {
+        if (hourInt == 12) 
+        {
+            hourInt = 0; 
+        }
+    } else 
+    { 
+        if (hourInt != 12) 
+        {
+            hourInt += 12; 
+        }
+    }
+    string militaryHour = (hourInt < 10 ? "0" : "") + to_string(hourInt);
+    return militaryHour + minutes_seconds;
+}
+
+int main() 
+{
+    string inputTime;
+    cout << "Enter time in 12-hour format (e.g., 12:01:00AM): ";
+    cin >> inputTime;
+    string militaryTime = timeConversion(inputTime);
+    
+    cout << "Military time: " << militaryTime << endl;
+    return 0;
+}
