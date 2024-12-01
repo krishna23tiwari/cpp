@@ -1,0 +1,80 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Define a struct to represent a Bank Account
+struct BankAccount {
+    string accountHolderName;
+    int accountNumber;
+    float balance;
+};
+
+// Function to create a new account
+void createAccount(BankAccount &account, string name, int accNumber, float initialBalance) {
+    account.accountHolderName = name;
+    account.accountNumber = accNumber;
+    account.balance = initialBalance;
+}
+
+// Function to deposit money into the account
+void deposit(BankAccount &account, float amount) {
+    if (amount > 0) {
+        account.balance += amount;
+        cout << "Deposited: $" << amount << endl;
+    } else {
+        cout << "Invalid deposit amount!" << endl;
+    }
+}
+
+// Function to withdraw money from the account
+void withdraw(BankAccount &account, float amount) {
+    if (amount > 0 && amount <= account.balance) {
+        account.balance -= amount;
+        cout << "Withdrawn: $" << amount << endl;
+    } else {
+        cout << "Insufficient balance or invalid amount!" << endl;
+    }
+}
+
+// Function to display account information
+void displayAccountDetails(const BankAccount &account) {
+    cout << "\nAccount Holder: " << account.accountHolderName << endl;
+    cout << "Account Number: " << account.accountNumber << endl;
+    cout << "Balance: $" << account.balance << endl;
+}
+
+int main() {
+    // Create two bank accounts
+    BankAccount account1, account2;
+
+    // Initialize account 1
+    createAccount(account1, "John Doe", 123456, 500.00f);
+    // Initialize account 2
+    createAccount(account2, "Jane Smith", 654321, 1000.00f);
+
+    // Display account details
+    cout << "\nAccount 1 Details:";
+    displayAccountDetails(account1);
+
+    cout << "\nAccount 2 Details:";
+    displayAccountDetails(account2);
+
+    // Perform some transactions on account 1
+    cout << "\nPerforming transactions on Account 1:" << endl;
+    deposit(account1, 150.00f); // Deposit
+    withdraw(account1, 100.00f); // Withdraw
+
+    // Perform some transactions on account 2
+    cout << "\nPerforming transactions on Account 2:" << endl;
+    deposit(account2, 200.00f); // Deposit
+    withdraw(account2, 50.00f);  // Withdraw
+
+    // Display updated account details
+    cout << "\nUpdated Account 1 Details:";
+    displayAccountDetails(account1);
+
+    cout << "\nUpdated Account 2 Details:";
+    displayAccountDetails(account2);
+
+    return 0;
+}
