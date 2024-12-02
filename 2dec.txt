@@ -1,0 +1,65 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    set<int> numbers;
+    int choice, num;
+
+    while (true) 
+    {
+        cout << "\nSimple Set Program\n";
+        cout << "1. Add Number\n";
+        cout << "2. Remove Number\n";
+        cout << "3. Display All Numbers\n";
+        cout << "4. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        if (choice == 1) 
+        {
+            cout << "Enter number to add: ";
+            cin >> num;
+            numbers.insert(num);
+            cout << "Number " << num << " added successfully.\n";
+        }
+        else if (choice == 2) 
+        {
+            cout << "Enter number to remove: ";
+            cin >> num;
+            if (numbers.find(num) != numbers.end()) 
+            {
+                numbers.erase(num);
+                cout << "Number " << num << " removed successfully.\n";
+            } 
+            else {
+                cout << "Number " << num << " not found.\n";
+            }
+        }
+        else if (choice == 3) 
+        {
+            if (numbers.empty()) 
+            {
+                cout << "The set is empty.\n";
+            } 
+            else {
+                cout << "Numbers in the set: ";
+                for (int n : numbers) 
+                {
+                    cout << n << " ";
+                }
+                cout << "\n";
+            }
+        }
+        else if (choice == 4) 
+        {
+            cout << "Exiting program...\n";
+            break;
+        }
+        else {
+            cout << "Invalid choice. Please try again.\n";
+        }
+    }
+
+    return 0;
+}
