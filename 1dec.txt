@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    set<int> arr = {10, 20, 30, 40};
+
+    cout << "Elements in the set: ";
+    for (auto it : arr) 
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    int a = 20;
+    if (arr.find(a) != arr.end()) 
+    {
+        cout << a << " is found in the set." << endl;
+    } 
+    else {
+        cout << a << " is not found in the set." << endl;
+    }
+    arr.erase(20);
+    cout << "After removing 20, elements in the set: ";
+    for (auto it : arr) 
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    cout << "Size of the set: " << arr.size() << endl;
+
+    arr.clear();
+    cout << "After clearing, size of the set: " << arr.size() << endl;
+
+    return 0;
+}
+
