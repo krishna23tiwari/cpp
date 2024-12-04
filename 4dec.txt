@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void findTwoSum(vector<int>& arr, int target) 
+{
+    int left = 0;
+    int right = arr.size() - 1;
+
+    while (left < right) 
+    {
+        int sum = arr[left] + arr[right];
+        cout << "Checking pair (" << arr[left] << ", " << arr[right] << ") with sum " << sum << endl;
+
+        if (sum == target) 
+        {
+            cout << "Found the pair: (" << arr[left] << ", " << arr[right] << ")" << endl;
+            return;
+        }
+        else if (sum < target) 
+        {
+            cout << "Sum " << sum << " is less than target. Moving left pointer." << endl;
+            left++;
+        }
+        else {
+            cout << "Sum " << sum << " is greater than target. Moving right pointer." << endl;
+            right--;
+        }
+    }
+    cout << "No pair found with the given sum." << endl;
+}
+int main() 
+{
+    vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int target = 10;
+
+    cout << "Searching for two numbers that sum to " << target << "..." << endl;
+    findTwoSum(arr, target);
+    return 0;
+}
