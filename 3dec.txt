@@ -1,0 +1,59 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void kapre(int p, int q) 
+{
+    bool a = false;
+
+    cout << "Checking Kaprekar numbers between " << p << " and " << q << ":\n";
+
+    for (int n = p; n <= q; ++n) 
+    {
+        long long square = (long long)n * n;
+
+        cout << "For number " << n << ", square = " << square << "\n";
+        
+        string sq = to_string(square);
+        int len = sq.length();
+        
+        int rlen = len - to_string(n).length();
+        
+        string rpart = sq.substr(rlen);
+        string lpart = sq.substr(0, rlen);
+
+        cout << "Split the square into left: '" << lpart << "' and right: '" << rpart << "'\n";
+        
+        int left = lpart.empty() ? 0 : stoi(lpart);
+        int right = stoi(rpart);
+        
+        if (left + right == n) 
+        {
+            cout << "Kaprekar number found: " << n << "\n";
+            if (a) 
+            {
+                cout << " ";
+            }
+            cout << n;
+            a = true;
+        }
+    }
+    
+    if (!a) 
+    {
+        cout << "INVALID RANGE\n";
+    } 
+    else {
+        cout << "\n";
+    }
+}
+
+int main() 
+{
+    int p, q;
+    cout << "Enter the lower limit (p): ";
+    cin >> p;  
+    cout << "Enter the upper limit (q): ";
+    cin >> q; 
+    kapre(p, q);
+    return 0;
+}
