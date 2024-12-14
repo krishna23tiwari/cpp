@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Student {
+    string name;
+    int age;
+    float grade;
+};
+
+void allocateStudents(Student** students, int size) {
+    *students = new Student[size];
+    for (int i = 0; i < size; i++) {
+        (*students)[i].name = "Student" + to_string(i + 1);
+        (*students)[i].age = 18 + (i % 5);
+        (*students)[i].grade = 70 + (i % 5) * 5;
+    }
+}
+
+void displayStudents(Student* students, int size) {
+    for (int i = 0; i < size; i++) {
+        cout << "Student Name: " << students[i].name << endl;
+        cout << "Age: " << students[i].age << endl;
+        cout << "Grade: " << students[i].grade << "%" << endl;
+        cout << "-----------------------------" << endl;
+    }
+}
+
+void deallocateStudents(Student* students) {
+    delete[] students;
+}
+
+int main() {
+    Student* students = nullptr;
+    int size = 5;
+
+    allocateStudents(&students, size);
+    displayStudents(students, size);
+    deallocateStudents(students);
+
+    return 0;
+}
