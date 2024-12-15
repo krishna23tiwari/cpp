@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+char nonrepeat(string& str) 
+{
+    unordered_map<char, int> charcount;
+
+    for (auto it : str) 
+    {
+        charcount[it]++;
+    }
+    for (auto it : str) 
+    {
+        if (charcount[it] == 1) 
+        {
+            return it;
+        }
+    }
+    return -1;
+}
+
+int main() 
+{
+    string input;
+    cout << "Enter a string: ";
+    cin >> input;
+
+    char result = nonrepeat(input);
+
+    if (result == -1) 
+    {
+        cout << "No non-repeating character found!" << endl;
+    } 
+    else 
+    {
+        cout << "The first non-repeating character is: " << result << endl;
+    }
+
+    return 0;
+}
