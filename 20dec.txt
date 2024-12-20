@@ -1,0 +1,53 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Person 
+{
+private:
+    string name;
+    int age;
+public:
+    Person(string name, int age) : name(name), age(age) {}
+
+    void disperson() 
+    {
+        cout << "Name: " << name << ", Age: " << age << endl;
+    }
+};
+
+class Employee 
+{
+private:
+    string empid;
+    double sal;
+public:
+    Employee(string empid, double sal) : empid(empid), sal(sal) {}
+
+    void disemp() 
+    {
+        cout << "Employee ID: " << empid << ", Salary: " << sal << endl;
+    }
+};
+
+class Manager : public Person, public Employee 
+{
+private:
+    string dep;
+public:
+    Manager(string name, int age, string empid, double sal, string dep)
+        : Person(name, age), Employee(empid, sal), dep(dep) {}
+
+    void dispman() {
+        disperson();
+        disemp();
+        cout << "Department: " << dep << endl;
+    }
+};
+
+int main() 
+{
+    Manager mgr("Ravi", 30, "E12345", 75000, "HR");
+    mgr.dispman();
+
+    return 0;
+}
