@@ -1,0 +1,72 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Account 
+{
+private:
+    string accountHolder;
+    double balance;
+
+public:
+    Account(string name, double initialBalance) {
+        accountHolder = name;
+        if (initialBalance >= 0) {
+            balance = initialBalance;
+        } else {
+            balance = 0;
+        }
+    }
+
+    void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            cout << "Deposited: $" << amount << endl;
+        } else {
+            cout << "Invalid deposit amount." << endl;
+        }
+    }
+
+    void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            cout << "Withdrawn: $" << amount << endl;
+        } else {
+            cout << "Invalid or insufficient funds for withdrawal." << endl;
+        }
+    }
+
+    double getBalance() const {
+        return balance;
+    }
+
+    void setAccountHolder(string name) {
+        accountHolder = name;
+    }
+
+    string getAccountHolder() const {
+        return accountHolder;
+    }
+
+    void displayAccountDetails() const {
+        cout << "Account Holder: " << accountHolder << endl;
+        cout << "Balance: $" << balance << endl;
+    }
+};
+
+int main() {
+    Account myAccount("John Doe", 500.0);
+
+    cout << "Account Details: " << endl;
+    myAccount.displayAccountDetails();
+    
+    myAccount.deposit(150.0);
+    myAccount.withdraw(100.0);
+    
+    cout << "\nUpdated Account Details: " << endl;
+    myAccount.displayAccountDetails();
+    
+    myAccount.setAccountHolder("Jane Smith");
+    cout << "\nUpdated Account Holder: " << myAccount.getAccountHolder() << endl;
+
+    return 0;
+}
