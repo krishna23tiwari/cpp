@@ -1,0 +1,78 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Rectangle {
+private:
+    double length;
+    double width;
+
+public:
+    Rectangle() {
+        length = 0;
+        width = 0;
+        cout << "Default constructor called." << endl;
+    }
+
+    Rectangle(double l, double w) {
+        length = l;
+        width = w;
+        cout << "Parameterized constructor called." << endl;
+    }
+
+    Rectangle(const Rectangle &rect) {
+        length = rect.length;
+        width = rect.width;
+        cout << "Copy constructor called." << endl;
+    }
+
+    ~Rectangle() {
+        cout << "Destructor called for rectangle of size " << length << " x " << width << "." << endl;
+    }
+
+    double area() {
+        return length * width;
+    }
+
+    double perimeter() {
+        return 2 * (length + width);
+    }
+
+    Rectangle& operator=(const Rectangle &rect) {
+        if (this != &rect) {
+            length = rect.length;
+            width = rect.width;
+        }
+        return *this;
+    }
+
+    void display() {
+        cout << "Rectangle dimensions: " << length << " x " << width << endl;
+    }
+};
+
+int main() {
+    Rectangle rect1;
+    rect1.display();
+    cout << "Area: " << rect1.area() << ", Perimeter: " << rect1.perimeter() << endl;
+
+    cout << endl;
+
+    Rectangle rect2(5.5, 3.2);
+    rect2.display();
+    cout << "Area: " << rect2.area() << ", Perimeter: " << rect2.perimeter() << endl;
+
+    cout << endl;
+
+    Rectangle rect3 = rect2;
+    rect3.display();
+    cout << "Area: " << rect3.area() << ", Perimeter: " << rect3.perimeter() << endl;
+
+    cout << endl;
+
+    Rectangle rect4;
+    rect4 = rect2;
+    rect4.display();
+    cout << "Area: " << rect4.area() << ", Perimeter: " << rect4.perimeter() << endl;
+
+    return 0;
+}
